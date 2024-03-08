@@ -53,12 +53,10 @@ Explore the code used to simulate the Game of Life. The code is written in Pytho
 
 6. The script will generate an animation of Conway's Game of Life and display it in a new window.
 <br/>
-
 ### Customization
 
 You can customize the behavior and appearance of the animation by modifying the parameters in the script:
 <br/>
-
 #### Generating the Universe
 
 - To initialize the universe with a **random state**, uncomment the line:
@@ -74,7 +72,6 @@ You can customize the behavior and appearance of the animation by modifying the 
     UNIVERSE[50:61, 10:50] = SEEDS["glider_gun"]
     ```
 <br/>
-
 #### Mechanics of Generating a Random Universe
 
 If you want to **generate a random universe of a different size**, you can modify the dimensions of the `UNIVERSE` array:
@@ -84,7 +81,6 @@ UNIVERSE = np.random.randint(2, size=(rows, cols))
 ```
 Replace rows and cols with the desired dimensions.
 <br/>
-
 #### Placing a Seed
 
 You can place a seed (predefined pattern) anywhere in the universe by modifying the indices in the `UNIVERSE` array:
@@ -96,13 +92,11 @@ Replace `start_row`, `end_row`, `start_col`, and `end_col` with the desired indi
 
 The script includes various predefined patterns for initializing the Game of Life universe, such as glider, glider gun, beacon, etc. You can look in the dictionary and use any of these seeds or define your own.
 <br/>
-
 #### Other Custamizations
 
 - `ITERATIONS`: Number of generations to simulate.
 - `SPEED`: Animation speed, specified in milliseconds.
 <br/>
-
 ### Saving the Animation
 
 You can save the animation as an MP4 file by uncommenting the following line in the script:
