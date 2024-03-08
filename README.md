@@ -6,7 +6,16 @@ Welcome to the Game of Life repository! Explore the fascinating world of cellula
 
 The Game of Life, invented by mathematician John Conway in 1970, is a cellular automaton that simulates the evolution of life-like patterns on a grid. It consists of a grid of cells, each of which can be in one of two states: alive or dead. The game evolves according to simple rules based on the number of neighboring alive cells.
 
+The rules are as follows:
+1. Any live cell with fewer than two live neighbors dies, as if by underpopulation.
+2. Any live cell with two or three live neighbors lives on to the next generation.
+3. Any live cell with more than three live neighbors dies, as if by overpopulation.
+4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+
+These simple rules give rise to a wide variety of visually intriguing patterns, ranging from simple oscillators and spaceships to complex structures like gliders and glider guns. Some of the most famous patterns include the glider, blinker, and pulsar.
+
 For more information, you can refer to the [Wikipedia page](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
+
 
 ## Visual Appeal and Artistic Representation
 
