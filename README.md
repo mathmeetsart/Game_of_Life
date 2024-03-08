@@ -1,4 +1,4 @@
-# Game of Life
+# Game of Life (WORK IN PROGRESS)
 
 Welcome to the Game of Life repository! Explore the fascinating world of cellular automata and emergent behavior.
 
