@@ -92,7 +92,7 @@ Replace `start_row`, `end_row`, `start_col`, and `end_col` with the desired indi
 
 The script includes various predefined patterns for initializing the Game of Life universe, such as glider, glider gun, beacon, etc. You can look in the dictionary and use any of these seeds or define your own.
 
-- ### Other Custamizations
+### Other Custamizations
 
 - `ITERATIONS`: Number of generations to simulate.
 - `SPEED`: Animation speed, specified in milliseconds.
