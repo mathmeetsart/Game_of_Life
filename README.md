@@ -52,7 +52,7 @@ Explore the code used to simulate the Game of Life. The code is written in Pytho
     ```
 
 6. The script will generate an animation of Conway's Game of Life and display it in a new window.
-<br/>\
+<br/>
 ### Customization
 
 You can customize the behavior and appearance of the animation by modifying the parameters in the script:
