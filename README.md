@@ -29,24 +29,79 @@ Beyond its aesthetic appeal, the Game of Life has practical applications in vari
 
 Explore the code used to simulate the Game of Life. The code is written in Python and utilizes libraries such as matplotlib and numpy.
 
-### Additional Requirements
+### Requirements
 
-To run the code and create your own simulations, you will need:
+- Python 3.12
+- ImageMagick (only for saving the animation)
+- NumPy
+- Matplotlib
 
-- Python (version X.X.X)
-- Required libraries (e.g., matplotlib, numpy)
+### Usage
 
-### Installation Instructions
+1. Clone this repository or download the `game_of_life_animation.py` file.
+2. Make sure you have Python and the required dependencies installed.
+3. Open a terminal or command prompt.
+4. Navigate to the directory containing `game_of_life_animation.py`.
+5. Run the script using the following command:
 
-1. Install Python from [python.org](https://www.python.org/downloads/).
-2. Install required libraries using pip:
+    ```bash
+    python game_of_life_animation.py
     ```
-    pip install matplotlib numpy
+
+6. The script will generate an animation of Conway's Game of Life and display it in a new window.
+
+### Customization
+
+You can customize the behavior and appearance of the animation by modifying the parameters in the script:
+
+#### Generating the Universe
+
+- To initialize the universe with a **random state**, uncomment the line:
+
+    ```python
+    UNIVERSE = np.random.randint(2, size=(128, 128))
     ```
 
-### Documentation
+- To use a **predefined pattern (seed)**, uncomment one of the patterns provided in the `SEEDS` dictionary. For example:
 
-The code is thoroughly documented to help you understand and modify it as needed. Each function and variable is explained to facilitate ease of use and customization.
+    ```python
+    # Set seed for an interesting pattern
+    UNIVERSE[50:61, 10:50] = SEEDS["glider_gun"]
+    ```
+
+#### Mechanics of Generating a Random Universe
+
+If you want to **generate a random universe of a different size**, you can modify the dimensions of the `UNIVERSE` array:
+
+```python
+UNIVERSE = np.random.randint(2, size=(rows, cols))
+```
+Replace rows and cols with the desired dimensions.
+
+#### Placing a Seed
+
+You can place a seed (predefined pattern) anywhere in the universe by modifying the indices in the `UNIVERSE` array:
+
+```python
+UNIVERSE[start_row:end_row, start_col:end_col] = SEEDS["your_seed_name"]
+```
+Replace `start_row`, `end_row`, `start_col`, and `end_col` with the desired indices to specify the location of the seed.
+
+The script includes various predefined patterns for initializing the Game of Life universe, such as glider, glider gun, beacon, etc. You can look in the dictionary and use any of these seeds or define your own.
+
+#### Other Custamizations
+
+- `ITERATIONS`: Number of generations to simulate.
+- `SPEED`: Animation speed, specified in milliseconds.
+
+### Saving the Animation
+
+You can save the animation as an MP4 file by uncommenting the following line in the script:
+
+```python
+# ani.save('game_of_life_animation.mp4', writer='imagemagick', fps=5)
+```
+This line saves the animation with the specified filename and frames per second (fps).
 
 ## Sample Images
 
