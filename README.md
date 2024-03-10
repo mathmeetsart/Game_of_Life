@@ -41,14 +41,14 @@ Explore the code used to simulate the Game of Life. The code is written in Pytho
 
 ### Usage
 
-1. Clone this repository or download the `game_of_life_animation.py` file.
+1. Clone this repository or download the `game_of_life.py` file.
 2. Make sure you have Python and the required dependencies installed.
 3. Open a terminal or command prompt.
-4. Navigate to the directory containing `game_of_life_animation.py`.
+4. Navigate to the directory containing `game_of_life.py`.
 5. Run the script using the following command:
 
     ```bash
-    python game_of_life_animation.py
+    python game_of_life.py
     ```
 
 6. The script will generate an animation of Conway's Game of Life and display it in a new window.
@@ -99,21 +99,13 @@ The script includes various predefined patterns for initializing the Game of Lif
 
 ### Saving the Animation
 
-You can save the animation as an MP4 file by uncommenting the following line in the script:
+You can save the animation as an GIF file by uncommenting the following line in the script:
 
 ```python
-# ani.save('game_of_life_animation.mp4', writer='imagemagick', fps=5)
+# ani.save('game_of_life_animation.gif', writer='imagemagick', fps=5)
 ```
 This line saves the animation with the specified filename and frames per second (fps).
 <br/><br/>
-
-## Sample Images
-
-Below are some sample images generated using the code in this repository:
-
-1. ![Image 1](image1.png)
-2. ![Image 2](image2.png)
-3. ![Image 3](image3.png)
 
 Explore the code, create your own simulations, and witness the fascinating dynamics of the Game of Life!
 <br/><br/>
