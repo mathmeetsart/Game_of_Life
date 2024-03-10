@@ -105,7 +105,6 @@ You can save the animation as an GIF file by uncommenting the following line in 
 # ani.save('game_of_life_animation.gif', writer='imagemagick', fps=5)
 ```
 This line saves the animation with the specified filename and frames per second (fps).
-<br/><br/>
 
 Explore the code, create your own simulations, and witness the fascinating dynamics of the Game of Life!
 <br/><br/>
