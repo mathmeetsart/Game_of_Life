@@ -100,13 +100,18 @@ SEEDS = {
         [1, 1, 1] 
     ],
     "eater with glider": [
-        [0, 0, 0, 0, 0, 1, 0],   #7*7
-        [0, 0, 0, 0, 0, 0, 1],   # Glider at the right
-        [0, 0, 0, 0, 1, 1, 1],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [1, 1, 0, 0, 0, 0, 0],   # Eater at the left
-        [0, 1, 1, 0, 0, 0, 0]
+        [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],   #12*12
+        [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],   # Glider at the left
+        [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],   # Eater at the right
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
     ],
     "diehard": [
         [0, 0, 0, 0, 0, 0, 1, 0],   #8*3
@@ -186,25 +191,40 @@ SEEDS = {
         [0, 1, 0],
         [0, 1, 0]
     ],
-}
+    "unknown": [
+        [0, 0, 0, 0, 0],    #5*9
+        [0, 1, 1, 1, 0], 
+        [0, 1, 0, 1, 0],
+        [0, 1, 0, 1, 0],
+        [0, 0, 0, 0, 0],
+        [0, 1, 0, 1, 0],
+        [0, 1, 0, 1, 0],
+        [0, 1, 1, 1, 0],
+        [0, 0, 0, 0, 0]
+    ]
+    }
 
 # Initialize universe (random or using a seed)
-#UNIVERSE = np.zeros((128, 128))  # Initialize with all cells dead
-UNIVERSE = np.random.randint(2, size=(128, 128))  # For a random starting state
+UNIVERSE = np.zeros((105, 59))  # Initialize with all cells dead
+#UNIVERSE = np.random.randint(2, size=(227, 128))  # For a random starting state
 
 # Set seed for an interesting pattern
-#UNIVERSE[50:61, 10:50] = SEEDS["glider_gun"]
+UNIVERSE[50:55, 28:31] = SEEDS["thunderbird"]
 
 # Animation parameters
-ITERATIONS = 100  # Number of generations to simulate
+ITERATIONS = 250  # Number of generations to simulate
 SPEED = 10  # Animation speed (interval in milliseconds)
 
 # Plotting
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(9, 16))    # for Reel size plt.subplots(figsize=(9, 16))
 img = ax.imshow(UNIVERSE, cmap='binary')  # Initial plot of the universe
 ani = animation.FuncAnimation(fig, update_plot, fargs=(img, UNIVERSE), frames=ITERATIONS, interval=SPEED, blit=True)
+ax.set_axis_off()
 
-# Optionally save animation as an MP4 file
-ani.save('game_of_life_animation.mp4', writer='imagemagick', fps=5)
+# add Title
+#plt.title('Glider')
+
+# Optionally save animation as an GIF file
+ani.save('game_of_life_thunderbird_animation.gif', writer='imagemagick', fps=10, dpi=100)
 
 plt.show()  # Display the animation
